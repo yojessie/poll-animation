@@ -1,0 +1,198 @@
+@import "./reset.css";
+
+.section {
+  width: 880px;
+  border-radius: 12px;
+  background-color: #fff;
+  border: 1px solid #e7ebf2;
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.list-maker {
+  background-color: #fbfbfc;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.polls-item {
+  width: 100%;
+  border-radius: 12px;
+  background-color: #fbfbfc;
+  border: 1px solid #e7ebf2;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+/* graph title */
+.polls-item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.polls-item-select {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.polls-item-select:last-child {
+  flex-direction: row-reverse;
+}
+
+.polls-item-select .percent {
+  font-weight: 400;
+}
+
+.polls-item-select .option {
+  margin-right: 8px;
+}
+
+.polls-item-select:last-child .option {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+.check-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: #f6f7f9;
+  border: 1px solid #e7ebf2;
+  margin-right: 8px;
+  transition: all 100ms ease-in-out;
+}
+
+.polls-item-select:last-child .check-button {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+.check-button svg path {
+  transition: fill 100ms ease-in-out;
+  fill: #e7ebf2;
+  pointer-events: none;
+}
+
+.check-button:hover {
+  background-color: rgba(93, 156, 236, 0.1);
+  border: 1px solid #5d9cec;
+}
+
+.check-button:hover svg path {
+  fill: #5d9cec;
+}
+
+/* graph bar */
+.polls-item-graph {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #e7ebf2;
+  transition: background-color 1s ease-in-out;
+}
+
+.graph-selected {
+  position: absolute;
+  width: 50%;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #e7ebf2;
+  transition: all 1s ease-in-out;
+}
+
+.graph-ball {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+
+/* for  input */
+.input {
+  border: 1px solid #e7ebf2;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 8px;
+  width: 100%;
+  height: 32px;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.input-group:last-child {
+  margin-bottom: 0;
+}
+
+.input.option {
+  width: 160%;
+  margin-right: 8px;
+}
+
+.input-button {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: #e7ebf2;
+  border-radius: 4px;
+}
+
+
+
+/* use in Javascript */
+.hidden {
+  display: none;
+}
+
+.button-active {
+  background-color: #5d9cec;
+  border: 0;
+}
+
+/* 선택한 리스트 내 hidden 클래스 일괄 삭제 & 호버 효과 중단 */
+.button-active-svg {
+  fill: #fff !important;
+}
+
+.polls-item.selected .hidden {
+  display: unset;
+}
+
+.polls-item.selected .check-button {
+  pointer-events: none;
+}
+
+.polls-item.selected .check-button svg path {
+  pointer-events: none;
+}
+
+.polls-item.selected .polls-item-graph {
+  background: #91939c;
+}
+
+.polls-item.selected .graph-selected {
+  background: #5d9cec;
+}
+
+/* 선택한 버튼이 오른쪽인 경우 */
+.polls-item.selected.right .graph-selected {
+  right: 0;
+}
+
+.polls-item.selected.right .graph-ball {
+  right: unset;
+  left: -15px;
+}

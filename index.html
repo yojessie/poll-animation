@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poll animation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="polls section">
+      <h3 class="section-title">Polls list</h3>
+      <ul class="polls-list">
+        <li class="polls-item">
+          <div class="polls-item-title">
+            <div class="polls-item-select">
+              <button class="check-button">
+                <svg
+                  class="button-svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.5003 16.515L6 12.0145L7.49973 10.5147L10.5003 13.5154L16.4992 7.51501L18 9.01484L10.5003 16.515Z"
+                    fill="#22294F"
+                  />
+                </svg>
+              </button>
+              <p class="option">option A</p>
+              <p class="percent hidden">28%</p>
+            </div>
+
+            <h4>This is the question</h4>
+
+            <div class="polls-item-select right">
+              <button class="check-button">
+                <svg
+                  class="button-svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.5003 16.515L6 12.0145L7.49973 10.5147L10.5003 13.5154L16.4992 7.51501L18 9.01484L10.5003 16.515Z"
+                    fill="#22294F"
+                  />
+                </svg>
+              </button>
+              <p class="option">option B</p>
+              <p class="percent hidden">72%</p>
+            </div>
+          </div>
+          <div class="polls-item-graph">
+            <div class="graph-selected hidden">
+              <img class="graph-ball" src="./asset/graph-ball.svg" />
+            </div>
+          </div>
+        </li>
+        <li class="polls-item">
+          <div class="polls-item-title">
+            <div class="polls-item-select">
+              <button class="check-button">
+                <svg
+                  class="button-svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.5003 16.515L6 12.0145L7.49973 10.5147L10.5003 13.5154L16.4992 7.51501L18 9.01484L10.5003 16.515Z"
+                    fill="#22294F"
+                  />
+                </svg>
+              </button>
+              <p class="option">option A</p>
+              <p class="percent hidden">64%</p>
+            </div>
+
+            <h4>This is the question</h4>
+
+            <div class="polls-item-select right">
+              <button class="check-button">
+                <svg
+                  class="button-svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.5003 16.515L6 12.0145L7.49973 10.5147L10.5003 13.5154L16.4992 7.51501L18 9.01484L10.5003 16.515Z"
+                    fill="#22294F"
+                  />
+                </svg>
+              </button>
+              <p class="option">option B</p>
+              <p class="percent hidden">36%</p>
+            </div>
+          </div>
+          <div class="polls-item-graph">
+            <div class="graph-selected hidden">
+              <img class="graph-ball" src="./asset/graph-ball.svg" />
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="list-maker section">
+      <h3 class="section-title">List maker</h3>
+      <div class="input-group">
+        <input class="input title" type="text" placeholder="Title of a new list">
+      </div>
+      <div class="input-group">
+        <input class="input option" type="text" placeholder="option A">
+        <input class="input number" type="number" placeholder="Percentage of option A" min="0" max="100">
+      </div>
+      <div class="input-group">
+        <input class="input option" type="text" placeholder="option B">
+        <input class="input number" type="number" placeholder="Percentage of option B" min="0" max="100">
+      </div>
+      <button class="input-button" type="button">Generate</button>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
